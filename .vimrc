@@ -1,4 +1,6 @@
 " setting
+scriptencoding utf-8
+set encoding=utf-8
 
 if &compatible
   set nocompatible
