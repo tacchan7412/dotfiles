@@ -20,6 +20,7 @@ call dein#add('scrooloose/nerdtree')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('tyru/caw.vim')
 call dein#add('fatih/vim-go')
+call dein#add('ConradIrwin/vim-bracketed-paste')
 
 call dein#end()
 
