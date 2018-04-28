@@ -1,4 +1,7 @@
 " setting
+scriptencoding utf-8
+set encoding=utf-8
+
 if &compatible
   set nocompatible
 endif
@@ -20,6 +23,7 @@ call dein#add('fatih/vim-go')
 call dein#add('kakkyz81/evervim')
 call dein#add('tell-k/vim-autopep8')
 call dein#add('scrooloose/syntastic')
+call dein#add('ConradIrwin/vim-bracketed-paste')
 
 call dein#end()
 
