@@ -1,5 +1,4 @@
 " setting
-
 if &compatible
   set nocompatible
 endif
@@ -18,6 +17,9 @@ call dein#add('scrooloose/nerdtree')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('tyru/caw.vim')
 call dein#add('fatih/vim-go')
+call dein#add('kakkyz81/evervim')
+call dein#add('tell-k/vim-autopep8')
+call dein#add('scrooloose/syntastic')
 
 call dein#end()
 
@@ -122,3 +124,17 @@ let g:go_fmt_command = "goimports"
 
 " neo-complete
 let g:neocomplete#enable_at_startup = 1
+
+" evervim
+let g:evervim_devtoken = 'S=s697:U=7bd3a05:E=168cf71496f:C=16177c01af0:P=1cd:A=en-devtoken:V=2:H=79b09bd4972472cbce0809fd3a25a5d5'
+
+" syntastic
+let g:syntastic_python_checkers = ['pyflakes', 'pep8']
+
+" rust
+let g:rustfmt_autosave = 1
+let g:rustfmt_command = '$HOME/.cargo/bin/rustfmt'
+
+set hidden
+let g:racer_cmd = '$HOME/.cargo/bin/racer'
+let $RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/"
