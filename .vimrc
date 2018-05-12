@@ -23,6 +23,7 @@ call dein#add('fatih/vim-go')
 call dein#add('tell-k/vim-autopep8')
 call dein#add('scrooloose/syntastic')
 call dein#add('ConradIrwin/vim-bracketed-paste')
+call dein#add('lervag/vimtex')
 
 call dein#end()
 
@@ -141,3 +142,21 @@ let g:rustfmt_command = '$HOME/.cargo/bin/rustfmt'
 set hidden
 let g:racer_cmd = '$HOME/.cargo/bin/racer'
 let $RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/"
+
+" vimtex
+let g:vimtex_compiler_latexmk = {
+      \ 'background': 1,
+      \ 'build_dir': '',
+      \ 'continuous': 1,
+      \ 'options': [
+      \    '-pdfdvi', 
+      \    '-verbose',
+      \    '-file-line-error',
+      \    '-synctex=1',
+      \    '-interaction=nonstopmode',
+      \],
+      \}
+
+let g:vimtex_view_general_viewer
+      \ = '/Applications/Skim.app/Contents/SharedSupport/displayline'
+let g:vimtex_view_general_options = '-r @line @pdf @tex'
