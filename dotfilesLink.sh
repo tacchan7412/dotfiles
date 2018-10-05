@@ -22,7 +22,7 @@ ln -s ~/dotfiles/colors/* ~/.vim/colors
 if [ -e $deindir ]; then
     echo "deindir already exists"
 else
-    mkdir -p deindir
-    git clone https://github.com/Shougo/dein.vim.git deindir
+    mkdir -p $deindir
+    git clone https://github.com/Shougo/dein.vim.git $deindir
 fi
 
