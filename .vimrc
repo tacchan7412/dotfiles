@@ -19,11 +19,9 @@ call dein#add('Shougo/neosnippet-snippets')
 call dein#add('scrooloose/nerdtree')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('tyru/caw.vim')
-call dein#add('fatih/vim-go')
 call dein#add('tell-k/vim-autopep8')
 call dein#add('scrooloose/syntastic')
 call dein#add('ConradIrwin/vim-bracketed-paste')
-call dein#add('lervag/vimtex')
 
 call dein#end()
 
@@ -107,7 +105,6 @@ set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
-
 " バインド系
 " ESCをjjでバインド
 inoremap <silent> jj <ESC>
@@ -117,46 +114,8 @@ inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
-" vim-go
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_interfaces = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "goimports"
-
 " neo-complete
 let g:neocomplete#enable_at_startup = 1
 
-" evervim
-let g:evervim_devtoken = 'S=s697:U=7bd3a05:E=168cf71496f:C=16177c01af0:P=1cd:A=en-devtoken:V=2:H=79b09bd4972472cbce0809fd3a25a5d5'
-
 " syntastic
 let g:syntastic_python_checkers = ['pyflakes', 'pep8']
-
-" rust
-let g:rustfmt_autosave = 1
-let g:rustfmt_command = '$HOME/.cargo/bin/rustfmt'
-
-set hidden
-let g:racer_cmd = '$HOME/.cargo/bin/racer'
-let $RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/"
-
-" vimtex
-let g:vimtex_compiler_latexmk = {
-      \ 'background': 1,
-      \ 'build_dir': '',
-      \ 'continuous': 1,
-      \ 'options': [
-      \    '-pdfdvi', 
-      \    '-verbose',
-      \    '-file-line-error',
-      \    '-synctex=1',
-      \    '-interaction=nonstopmode',
-      \],
-      \}
-
-let g:vimtex_view_general_viewer
-      \ = '/Applications/Skim.app/Contents/SharedSupport/displayline'
-let g:vimtex_view_general_options = '-r @line @pdf @tex'
