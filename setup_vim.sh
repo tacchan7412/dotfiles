@@ -1,8 +1,8 @@
-vimdir=~/.vim
-colordir=~/.vim/colors
-deindir=~/.vim/dein/repos/github.com/Shougo/dein.vim
+export vimdir=${HOME}/.vim
+export colordir=${HOME}/.vim/colors
+export deindir=${HOME}/.vim/dein/repos/github.com/Shougo/dein.vim
 
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s $(pwd)/.vimrc ${HOME}/.vimrc
 
 if [ -e $vimdir ]; then
     echo "vimdir already exists."
@@ -12,15 +12,13 @@ fi
 
 if [ -e $colordir ]; then
     echo "colordir already exists."
-else 
-    mkdir -p $colordir
 fi
 
-ln -s ~/dotfiles/colors/* ~/.vim/colors
+ln -s $(pwd)/colors $vimdir
 
 if [ -e $deindir ]; then
     echo "deindir already exists"
 else
-    mkdir -p deindir
-    git clone https://github.com/Shougo/dein.vim.git deindir
+    mkdir -p $deindir
+    git clone https://github.com/Shougo/dein.vim.git $deindir
 fi
